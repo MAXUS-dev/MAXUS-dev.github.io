@@ -15,8 +15,11 @@ a{text-decoration:none;color:inherit}
 .wrap{width:min(1200px,calc(100% - 44px));margin:auto}
 header{position:sticky;top:0;z-index:100;background:rgba(6,9,13,.86);backdrop-filter:blur(15px);border-bottom:1px solid #252c35}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;width:150px;height:58px}
-.brand img{width:100%;height:100%;object-fit:contain}
+.brand{display:flex;align-items:center;gap:12px;height:58px;text-decoration:none}
+.brand img{height:42px;width:auto;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;justify-content:center;line-height:1.2}
+.brand-title{font-size:18px;font-weight:700;color:#ffffff;letter-spacing:0.5px}
+.brand-subtitle{font-size:11px;font-weight:400;color:var(--gold);letter-spacing:0.5px}
 .links{display:flex;gap:31px;font-size:14px}
 .links a{color:#d6dae0;position:relative;padding:28px 0}
 .links a:after{content:"";position:absolute;left:0;right:100%;bottom:17px;height:2px;background:var(--gold);transition:.25s}
@@ -71,7 +74,7 @@ footer{border-top:1px solid #222a33;text-align:center;padding:31px 0;color:#6e78
 @keyframes drift{to{transform:translate(55px,30px);opacity:.65}}
 @keyframes float{0%,100%{transform:translateY(0);opacity:.25}50%{transform:translateY(-24px);opacity:.8}}
 @media(max-width:950px){.apps{grid-template-columns:repeat(2,1fr)}.heroGrid,.aboutGrid{grid-template-columns:1fr}.hero{min-height:auto}.heroLogo{height:240px;max-width:500px;margin:auto}.aboutLogo{width:230px;height:230px}.contact{grid-template-columns:1fr}}
-@media(max-width:560px){.wrap{width:min(100% - 30px,1200px)}.nav{height:66px}.brand{width:125px;height:55px}.links{display:none}.heroGrid{padding:55px 0 65px;gap:25px}.heroLogo{height:200px}.heroText p{font-size:15px}.title{display:block}.title p{margin-top:7px}.apps{grid-template-columns:1fr 1fr;gap:12px}.card{padding:11px;border-radius:16px}.card h3{font-size:14px}.card p{font-size:12px;min-height:auto}.open{font-size:12px;padding:9px}.iconbox{border-radius:12px}}
+@media(max-width:560px){.wrap{width:min(100% - 30px,1200px)}.nav{height:66px}.brand img{height:34px}.brand-title{font-size:16px}.brand-subtitle{font-size:10px}.links{display:none}.heroGrid{padding:55px 0 65px;gap:25px}.heroLogo{height:200px}.heroText p{font-size:15px}.title{display:block}.title p{margin-top:7px}.apps{grid-template-columns:1fr 1fr;gap:12px}.card{padding:11px;border-radius:16px}.card h3{font-size:14px}.card p{font-size:12px;min-height:auto}.open{font-size:12px;padding:9px}.iconbox{border-radius:12px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -79,7 +82,13 @@ footer{border-top:1px solid #222a33;text-align:center;padding:31px 0;color:#6e78
 
 <header>
 <div class="wrap nav">
-<a class="brand" href="#beranda"><img src="assets/maxus-logo-transparent.png" alt="MAXuS — MAXimal USaha"></a>
+<a class="brand" href="#beranda">
+  <img src="assets/maxus-logo-transparent.png" alt="MAXuS — MAXimal USaha">
+  <div class="brand-text">
+    <span class="brand-title">MaxuS</span>
+    <span class="brand-subtitle">Developer Android</span>
+  </div>
+</a>
 <nav class="links">
 <a href="#beranda">Beranda</a><a href="#aplikasi">Aplikasi</a><a href="#tentang">Tentang MaxuS</a><a href="#kontak">Kontak</a>
 </nav>
@@ -103,11 +112,11 @@ footer{border-top:1px solid #222a33;text-align:center;padding:31px 0;color:#6e78
 <section id="aplikasi">
 <div class="wrap"><div class="title"><h2>Aplikasi <span>MaxuS</span></h2><p>Semua aplikasi dalam satu ekosistem.</p></div>
 <div class="apps">
-<article class="card"><div class="iconbox"><img src="assets/media.jpg" alt="MaxuS Media"></div><h3>MaxuS Media</h3><p>Movies • Series • Music</p><a class="open" href="https://maxus-dev.github.io/MaxuSMedia/" target="_blank" rel="noopener">Buka Aplikasi ↗</a></article>
+<article class="card"><div class="iconbox"><img src="assets/media.jpg" alt="MaxuS Media"></div><h3>MaxuS Media</h3><p>Movies • Series • Music</p><a class="open" href="https://maxus-dev.github.io/" target="_blank" rel="noopener">Buka Aplikasi ↗</a></article>
 <article class="card"><div class="iconbox"><img src="assets/abiquan.jpg" alt="AbiQuran"></div><h3>AbiQuran</h3><p>Al-Qur'an • Kajian • Hadis</p><a class="open" href="https://maxus-dev.github.io/AbiQuran/" target="_blank" rel="noopener">Buka Aplikasi ↗</a></article>
-<article class="card"><div class="iconbox"><img src="assets/trackride.jpg" alt="MaxuS TrackRide"></div><h3>MaxuS TrackRide</h3><p>Kendaraan • BBM • Keuangan</p><a class="open" href="https://maxus-dev.github.io/MaxuSTrackRide/" target="_blank" rel="noopener">Buka Aplikasi ↗</a></article>
-<article class="card"><div class="iconbox"><img src="assets/expense.jpg" alt="MaxuS Expense Logic"></div><h3>MaxuS Expense Logic</h3><p>Keuangan • Budget • Tagihan</p><a class="open" href="https://maxus-dev.github.io/MaxuSExpenseLogic/" target="_blank" rel="noopener">Buka Aplikasi ↗</a></article>
-<article class="card"><div class="iconbox"><img src="assets/mybisnis.jpg" alt="MaxuS MyBisnis"></div><h3>MaxuS MyBisnis</h3><p>Kasir POS • Stok • Laporan</p><a class="open" href="https://maxus-dev.github.io/MaxuSMyBisnis/" target="_blank" rel="noopener">Buka Aplikasi ↗</a></article>
+<article class="card"><div class="iconbox"><img src="assets/trackride.jpg" alt="MaxuS TrackRide"></div><h3>MaxuS TrackRide</h3><p>Kendaraan • BBM • Keuangan</p><a class="open" href="https://maxus-dev.github.io/" target="_blank" rel="noopener">Buka Aplikasi ↗</a></article>
+<article class="card"><div class="iconbox"><img src="assets/expense.jpg" alt="MaxuS Expense Logic"></div><h3>MaxuS Expense Logic</h3><p>Keuangan • Budget • Tagihan</p><a class="open" href="https://maxus-dev.github.io/" target="_blank" rel="noopener">Buka Aplikasi ↗</a></article>
+<article class="card"><div class="iconbox"><img src="assets/mybisnis.jpg" alt="MaxuS MyBisnis"></div><h3>MaxuS MyBisnis</h3><p>Kasir POS • Stok • Laporan</p><a class="open" href="https://maxus-dev.github.io/" target="_blank" rel="noopener">Buka Aplikasi ↗</a></article>
 </div></div>
 </section>
 
